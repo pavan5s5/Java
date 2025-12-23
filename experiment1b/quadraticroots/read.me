@@ -1,0 +1,38 @@
+# experiment1b
+## calculate quadratic roots of equation
+## source code:
+import java.util.Scanner; 
+class QuadraticEuation { 
+public static void main(String args[]) {    
+   Scanner obj=new Scanner(System.in);  
+   System.out.println("enter acoefficent a:"); 
+   double a=obj.nextDouble();   
+   System.out.println("enter acoefficent b:");   
+   double b=obj.nextDouble(); 
+   System.out.println("enter acoefficent c:"); 
+   double c=obj.nextDouble();  
+   double D=b*b-4*a*c;   
+   System.out.println("calculate a discreminate :"+D);   
+   if(D>0)     
+    {   
+     double x1=(-b+Math.sqrt(D))/2*a;     
+     double x2=(-b-Math.sqrt(D))/2*a;    
+     System.out.println("the two real and distinct");      
+     System.out.println("Root1:"+x1);       
+     System.out.println("Root2:"+x2);  
+   }    
+  else if(D==0)     
+   {     
+     double x=-b/(2*a);    
+     System.out.println("the roots real and equal :"+x); 
+  }    
+  else 
+  {       
+    double realPart=-b/(2*a);       
+    double imaginaryPart=Math.sqrt(-D)/(2*a);      
+   System.out.println("nature of two complex roots");      
+   System.out.println("Root1="+realPart+ "+" +imaginaryPart+);
+   System.out.println("Root1="+realPart+ "-" +imaginaryPart+);
+ }
+}
+}
